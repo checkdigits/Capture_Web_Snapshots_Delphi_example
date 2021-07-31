@@ -1,0 +1,176 @@
+inherited NewFormFrame: TNewFormFrame
+  Size.Width = 335.000000000000000000
+  inherited MainLayout: TGridPanelLayout
+    Size.Width = 335.000000000000000000
+    ControlCollection = <
+      item
+        Column = 0
+        Control = HeaderRect
+        Row = 0
+      end
+      item
+        Column = 0
+        Control = EdtAccKey
+        Row = 1
+      end
+      item
+        Column = 0
+        Control = EdtURL
+        Row = 2
+      end
+      item
+        Column = 0
+        Control = EdtViewPort
+        Row = 3
+      end
+      item
+        Column = 0
+        Control = Lyt1
+        Row = 4
+      end
+      item
+        Column = 0
+        Control = img1
+        Row = 5
+      end>
+    RowCollection = <
+      item
+        Value = 7.137195106057429000
+      end
+      item
+        Value = 8.039698737064176000
+      end
+      item
+        Value = 7.609377450184088000
+      end
+      item
+        Value = 6.695695118135343000
+      end
+      item
+        Value = 12.431255199228170000
+      end
+      item
+        Value = 58.086778389330800000
+      end>
+    inherited HeaderRect: TRectangle
+      Size.Width = 335.000000000000000000
+      Size.Height = 41.895336151123050000
+      inherited CaptionLbl: TLabel
+        Size.Width = 335.000000000000000000
+        Size.Height = 38.895336151123050000
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        Text = 'Screenshotlayer API with Delphi'
+        inherited HamburgerImg: TPath
+          Size.Height = 21.895336151123050000
+          inherited HitBox: TLayout
+            Size.Height = 27.895336151123050000
+          end
+        end
+      end
+    end
+    object EdtAccKey: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = []
+      TabOrder = 2
+      TextSettings.Font.Size = 16.000000000000000000
+      Position.X = 36.000000000000000000
+      Position.Y = 54.491851806640630000
+      Size.Width = 263.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Access Key'
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object EdtURL: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = []
+      TabOrder = 1
+      TextSettings.Font.Size = 16.000000000000000000
+      Position.X = 35.500000000000000000
+      Position.Y = 100.421882629394500000
+      Size.Width = 264.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'URL'
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object EdtViewPort: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = []
+      TabOrder = 0
+      TextSettings.Font.Size = 16.000000000000000000
+      Position.X = 35.500000000000000000
+      Position.Y = 142.407257080078100000
+      Size.Width = 264.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Viewport'
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object Lyt1: TLayout
+      Align = Client
+      Size.Width = 335.000000000000000000
+      Size.Height = 72.971466064453130000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object ChkBFullPage: TCheckBox
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 32.000000000000000000
+        Position.Y = 8.000000000000000000
+        TabOrder = 0
+        Text = 'Full Page'
+        TextSettings.Font.Size = 14.000000000000000000
+      end
+      object BtnSendRequest: TButton
+        Anchors = [akTop, akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 172.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 128.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Request'
+        TextSettings.Font.Size = 16.000000000000000000
+        OnClick = BtnSendRequestClick
+      end
+      object EdtSecretKey: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 2
+        Position.X = 70.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Secret Keyword'
+      end
+    end
+    object img1: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      Size.Width = 335.000000000000000000
+      Size.Height = 340.969421386718800000
+      Size.PlatformDefault = False
+    end
+  end
+  object IdHTTP1: TIdHTTP
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 264
+    Top = 448
+  end
+end
